@@ -93,3 +93,4 @@ if __name__ == '__main__':
         topic="homeassistant/sensor/Linux_Updates_Available/state", 
         payload='{ "'+ deviceName +'": '+ str(pkgs) +' }', 
         qos=1, retain=True)
+
