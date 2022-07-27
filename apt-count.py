@@ -18,6 +18,11 @@ parser = configparser.ConfigParser()
 
 ini_file_name = "/usr/local/etc/apt-count-config.ini"
 
+flag = os.path.isfile(ini_file_name)
+
+if not flag:
+    exit("Config file "+ ini_file_name + " missing.\nPlease fix and try again. Exiting.")
+
 parser.read(ini_file_name)
 
 # Set deviceName to the hostname
