@@ -46,7 +46,7 @@ fi
 #
 
 py_file="apt-count.py"
-if ! [ -f "$py_file"]; then
+if ! [ -f "$py_file" ]; then
     echo "Not in the proper directory!"
     exit
 fi
@@ -55,7 +55,7 @@ cp "$py_file" /usr/local/bin/"$py_file"
 echo "Script installed."
 
 ini_file="apt-count-config.ini"
-if [ -f "$ini_file"]; then
+if [ -f /usr/local/etc/"$ini_file" ]; then
     echo "INI file exists, not copied"
 else
     cp "$ini_file" /usr/local/etc/"$ini_file"
