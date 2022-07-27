@@ -6,6 +6,7 @@ import os
 import sys
 import signal
 import paho.mqtt.client as mqtt
+import time
 
 # from datetime import timedelta
 # import datetime as dt
@@ -88,6 +89,8 @@ if __name__ == '__main__':
                 } 
             }''', 
         qos=1, retain=True)
+    
+    time.sleep(6)
 
     client.publish(
         topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/state", 
