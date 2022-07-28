@@ -108,6 +108,6 @@ if __name__ == '__main__':
     time.sleep(6)
 
     client.publish(
-        topic="homeassistant/sensor/Linux_Updates_Available/updates_available_"+ deviceName +"/state", 
-        payload='{ "'+ deviceName +'": '+ str(pkgs) +' }', 
+        topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/state", 
+        payload='{ "updates_available_'+ deviceName +'": '+ str(pkgs) +' }', 
         qos=1, retain=True)
