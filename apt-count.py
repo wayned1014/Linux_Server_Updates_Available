@@ -89,7 +89,7 @@ if __name__ == '__main__':
         topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/config", 
         payload='''{ 
             "name": "'''+ deviceName +'''", 
-            "json_attributes_topic": "homeassistant/sensor/Linux_Updates_Available/'''+ deviceName +'''/state", 
+            "json_attributes_topic": "homeassistant/sensor/Linux_Updates_Available/updates_available_'''+ deviceName +'''/state", 
             "entity_category": "diagnostic",
             "enabled_by_default": true,
             "state_topic": "homeassistant/sensor/Linux_Updates_Available/'''+ deviceName +'''/state", 
