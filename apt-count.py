@@ -88,14 +88,13 @@ if __name__ == '__main__':
     client.publish(
         topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/config", 
         payload='''{ 
-            "name": "'''+ deviceName +'''", 
-            "json_attributes_topic": "homeassistant/sensor/Linux_Updates_Available/updates_available_'''+ deviceName +'''/state", 
-            "entity_category": "diagnostic",
+            "name": "updates_available_'''+ deviceName +'''", 
+            "json_attributes_topic": "homeassistant/sensor/Linux_Updates_Available/'''+ deviceName +'''/state", 
             "enabled_by_default": true,
             "state_topic": "homeassistant/sensor/Linux_Updates_Available/'''+ deviceName +'''/state", 
             "state_class": "measurement", 
             "unique_id": "linux_updates_available_'''+ deviceName +'''", 
-            "value_template": "{{ value_json.updates_available_'''+ deviceName +''' }}", 
+            "value_template": "{{ value_json.'''+ deviceName +''' }}", 
             "device":{
                 "identifiers":["Linux_Updates"], 
                 "manufacturer":"WLD", 
@@ -109,5 +108,5 @@ if __name__ == '__main__':
 
     client.publish(
         topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/state", 
-        payload='{ "updates_available_'+ deviceName +'": '+ str(pkgs) +' }', 
+        payload='{ "'+ deviceName +'": '+ str(pkgs) +' }', 
         qos=1, retain=True)
