@@ -11,9 +11,9 @@ The reason for this project is because I have many linux server running on ESXi 
 
 + First, we will need to clone the repository:
 
-```
+   ```
 git clone https://github.com/wayned1014/Linux_Server_Updates_Available.git
-```
+   ```
 
 + Change to the 'Linux_Server_Updates_Available' directory:
 
