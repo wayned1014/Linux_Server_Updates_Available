@@ -21,7 +21,7 @@ ini_file_name = "/usr/local/etc/apt-count-config.ini"
 flag = os.path.isfile(ini_file_name)
 
 if not flag:
-    exit("Config file "+ ini_file_name + " missing.\nPlease fix and try again. Exiting.")
+    sys.exit("Config file "+ ini_file_name + " missing.\nPlease fix and try again. Exiting.")
 
 parser.read(ini_file_name)
 
@@ -35,7 +35,7 @@ def get_config(config, section, name):
     if config.has_option(section,name):
         return config.get(section,name)
     else:
-        exit("Missing "+ name + ".\nPlease try again. Exiting.")
+        sys.exit("Missing "+ name + ".\nPlease try again. Exiting.")
 
 def signal_handler(signum, frame):
     raise ProgramKilled
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     # First we will check that we are running the script as root
     #
     if os.geteuid() != 0:
-        exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+        sys.exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
 
     broker_url = get_config(parser, "settings", "broker_url")
     broker_port = int(get_config(parser, "settings", "broker_port"))
