@@ -45,5 +45,5 @@ sudo apt-count.py
 
 ## Tested with
 
-+Debian 10 & 11
-+Kubuntu 22.04
++ Debian 10 & 11
++ Kubuntu 22.04
