@@ -12,13 +12,13 @@ The reason for this project is because I have many linux server running on ESXi 
 + First, we will need to clone the repository:
 
 ```
-    git clone https://github.com/wayned1014/Linux_Server_Updates_Available.git
+git clone https://github.com/wayned1014/Linux_Server_Updates_Available.git
 ```
 
 + Change to the 'Linux_Server_Updates_Available' directory:
 
 ```
-    cd Linux_Server_Updates_Available
+cd Linux_Server_Updates_Available
 ```
 
 +  At this point if this is the initial install, edit the 'apt-count-config.ini' and fill in with the appropriate information.  If this is an update you do not need to edit this file as it will not overwrite your current config file.
@@ -26,13 +26,13 @@ The reason for this project is because I have many linux server running on ESXi 
 + now just run the install script:
 
 ```
-    sudo ./install_apt-count.sh
+sudo ./install_apt-count.sh
 ```
 
 + To run the script manually:
 
 ```
-    sudo apt-count.py
+sudo apt-count.py
 ```
 
 + You can use crontab to schedule it to run periodically.  It will need to be added to either the root or system crontab.  I setup the following to execute the script every four hours:
