@@ -3,7 +3,7 @@ READ file is a work in progress
 
 ## What is it?
 
-This project is designed to work with Home Assistant.  It will create a device with a list of sensors for each linux server with the number of updates available for it.
+This project is designed to work with Home Assistant.  It will create a device with a list of sensors using the hostname of each linux server with the number of updates available for it.
 
 ![alt text](https://github.com/wayned1014/Linux_Server_Updates_Available/blob/master/images/screen_shot.png)
 
