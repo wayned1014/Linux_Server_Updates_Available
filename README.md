@@ -17,21 +17,29 @@ The reason for this project is because I have many linux server running on ESXi 
 
 + Change to the 'Linux_Server_Updates_Available' directory:
 
+```
     cd Linux_Server_Updates_Available
+```
 
 +  At this point if this is the initial install, edit the 'apt-count-config.ini' and fill in with the appropriate information.  If this is an update you do not need to edit this file as it will not overwrite your current config file.
 
 + now just run the install script:
 
+```
     sudo ./install_apt-count.sh
+```
 
 + To run the script manually:
 
+```
     sudo apt-count.py
+```
 
 + You can use crontab to schedule it to run periodically.  It will need to be added to either the root or system crontab.  I setup the following to execute the script every four hours:
 
-    10  */4  *  *  *  /usr/bin/python3 /usr/local/bin/apt-count.py > /dev/null 2>&1
+```
+10  */4  *  *  *  /usr/bin/python3 /usr/local/bin/apt-count.py > /dev/null 2>&1
+```
 
 ## Tested with
 
