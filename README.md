@@ -9,6 +9,11 @@ This project is designed to work with Home Assistant.  It will create a device w
 
 The reason for this project is because I have many linux server running on ESXi and wanted a central location to see if any of the systems need any updates.  I was hoping Glances had that as a plugin, but it did not(at lease what I could tell).  So i decided since I was in the process of learning Python I figured I would give it a try.  This is my first Python project and I know from past experiences with other languages through the years this is probably not the most efficient code that i wrote.  I will, over time, learn more better coding skills.  I am also open to suggestions on making the code more efficient.
 
+## Requirments
+
++ Python 3.9 or 3.10
++ PIP dependency: paho-mqtt
+
 ## How to install
 
 + First, we will need to clone the repository:
