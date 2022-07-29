@@ -5,6 +5,8 @@ READ file is a work in progress
 
 This project is designed to work with Home Assistant.  It will create a device with a list of sensors for each linux server with the number of updates available for it.
 
+![alt text](https://github.com/wayned1014/Linux_Server_Updates_Available/blob/master/images/screen_shot.png)
+
 The reason for this project is because I have many linux server running on ESXi and wanted a central location to see if any of the systems need any updates.  I was hoping Glances had that as a plugin, but it did not(at lease what I could tell).  So i decided since I was in the process of learning Python I figured I would give it a try.  This is my first Python project and I know from past experiences with other languages through the years this is probably not the most efficient code that i wrote.  I will, over time, learn more better coding skills.  I am also open to suggestions on making the code more efficient.
 
 ## How to install
