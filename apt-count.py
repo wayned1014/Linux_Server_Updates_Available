@@ -89,9 +89,9 @@ if __name__ == '__main__':
         topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/config", 
         payload='''{ 
             "name": "updates_available_'''+ deviceName +'''", 
-            "json_attributes_topic": "homeassistant/sensor/Linux_Updates_Available/'''+ deviceName +'''/state", 
+            "json_attributes_topic": "Linux_Updates_Available/'''+ deviceName +'''/state", 
             "enabled_by_default": true,
-            "state_topic": "homeassistant/sensor/Linux_Updates_Available/'''+ deviceName +'''/state", 
+            "state_topic": "Linux_Updates_Available/'''+ deviceName +'''/state", 
             "state_class": "measurement", 
             "unique_id": "linux_updates_available_'''+ deviceName +'''", 
             "value_template": "{{ value_json.'''+ deviceName +''' }}", 
@@ -107,6 +107,9 @@ if __name__ == '__main__':
     time.sleep(6)
 
     client.publish(
-        topic="homeassistant/sensor/Linux_Updates_Available/"+ deviceName +"/state", 
-        payload='{ "'+ deviceName +'": '+ str(pkgs) +' }', 
+        topic="Linux_Updates_Available/"+ deviceName +"/state", 
+        payload='''{ 
+            "'''+ deviceName +'''": '''+ str(pkgs) +''',
+            "docker_compose": "na"
+            }''', 
         qos=1, retain=True)

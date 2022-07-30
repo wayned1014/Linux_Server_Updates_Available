@@ -14,32 +14,16 @@ then
     exit
 fi
 
+# add python3-packaging later
+packages="python3-paho-mqtt"
 
-if command -v pip3 > /dev/null; then
-  pip3_installed=0
-else
-  pip3_installed=1
-fi
-
-Package=paho
-python3 -c "import sys, pkgutil; sys.exit(0 if pkgutil.find_loader('$Package') else 1)"
-pm_installed=$?
-
-if [ $pm_installed -eq 1 ]
-then
-    echo "Missing paho.mqtt"
-fi
-
-if [ $pip3_installed -eq 1 ]
-then
-    echo "Missing pip3"
-fi
-
-if [ $pm_installed -eq 1 ] || [ $pip3_installed -eq 1 ]
-then
-    echo "Exiting..."
-    exit
-fi
+for package in $packages; do
+    dpkg -s "$package" >/dev/null 2>&1 && {
+        echo "$package is installed."
+    } || {
+        apt-get install $package
+    }
+done
 
 #
 # Now that we got here everything is ready for the install
@@ -47,7 +31,7 @@ fi
 
 py_file="apt-count.py"
 if ! [ -f "$py_file" ]; then
-    echo "Not in the proper directory!"
+    echo "Not in the 'Linux_Server_Updates_Available' directory!"
     exit
 fi
 
