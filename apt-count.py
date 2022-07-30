@@ -109,7 +109,6 @@ if __name__ == '__main__':
     client.publish(
         topic="Linux_Updates_Available/"+ deviceName +"/state", 
         payload='''{ 
-            "'''+ deviceName +'''": '''+ str(pkgs) +''',
-            "docker_compose": "na"
+            "'''+ deviceName +'''": '''+ str(pkgs) +'''
             }''', 
         qos=1, retain=True)
