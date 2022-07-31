@@ -71,7 +71,7 @@ def get_docker_compose_version():
     result = subprocess.run(['docker-compose', '--version'], stdout=subprocess.PIPE)
 
     docker_compose_version = result.stdout.decode('utf-8')[23:]
-    print (result.stdout.decode('utf-8'))
+    
     print(docker_compose_version)
 
     local_docker_compose = version.parse(docker_compose_version)
