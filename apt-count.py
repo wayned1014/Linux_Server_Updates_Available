@@ -60,7 +60,7 @@ def get_docker_compose_version():
     #
     x = requests.get('https://api.github.com/repos/docker/compose/releases/latest')
 
-    if x.status_code != '200':
+    if x.status_code != 200:
         print('docker-compose github read error: %d' % x.status_code)
         return "na"
 
