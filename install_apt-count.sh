@@ -14,8 +14,7 @@ then
     exit
 fi
 
-# add python3-packaging later
-packages="python3-paho-mqtt"
+packages="python3-paho-mqtt python3-packaging python3-requests-futures"
 
 for package in $packages; do
     dpkg -s "$package" >/dev/null 2>&1 && {
