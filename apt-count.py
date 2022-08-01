@@ -68,7 +68,7 @@ def get_docker_compose_version():
 
     # Now will will get the currently install version of docker-compose
     #
-    result = subprocess.run(['docker-compose', '--version'], stdout=subprocess.PIPE)
+    result = subprocess.run(['/usr/local/bin/docker-compose', '--version'], stdout=subprocess.PIPE)
 
     docker_compose_version = result.stdout.decode('utf-8')[23:]
     
