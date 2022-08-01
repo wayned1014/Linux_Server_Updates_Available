@@ -12,7 +12,8 @@ The reason for this project is because I have many linux server running on ESXi 
 ## Requirments
 
 + Python 3.9 or 3.10
-+ PIP dependency: paho-mqtt
++ PIP dependency: python3-paho-mqtt, python3-packaging, python3-requests-futures
+  (Will be installed during install)
 
 ## How to install
 
