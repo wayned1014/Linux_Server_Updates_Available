@@ -17,7 +17,6 @@ import requests
 from packaging import version
 import subprocess
 
-
 # This is the default infomation.  Then we will read the config file
 # for the current information
 #
