@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-# Version: 1.0.0
+# Version: 1.0.1
 # This script will create/update an entity in HA with the number
 # of updates available for the system.
 
